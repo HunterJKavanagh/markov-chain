@@ -1,0 +1,26 @@
+
+The:
+	dog 0.666667
+	person 0.333333
+dog:
+	ate 1
+ate:
+	a 0.666667
+	an 0.333333
+a:
+	apple. 0.5
+	apple.. 0.5
+apple.:
+an:
+	apple 0.5
+	ate 0.5
+apple:
+	pie. 1
+pie.:
+person:
+	ran 1
+ran:
+	away 1
+away:
+	an 1
+apple..:

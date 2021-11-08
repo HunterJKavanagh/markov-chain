@@ -1,0 +1,102 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+
+[node name="Base" type="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopBar" type="HBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 24.0
+
+[node name="Run" type="Button" parent="TopBar"]
+margin_right = 84.0
+margin_bottom = 24.0
+size_flags_vertical = 3
+text = "Build Chain"
+
+[node name="Import" type="Button" parent="TopBar"]
+margin_left = 88.0
+margin_right = 144.0
+margin_bottom = 24.0
+size_flags_vertical = 3
+text = "Import"
+
+[node name="Export" type="Button" parent="TopBar"]
+margin_left = 148.0
+margin_right = 200.0
+margin_bottom = 24.0
+size_flags_vertical = 3
+text = "Export"
+
+[node name="LineEdit" type="LineEdit" parent="TopBar"]
+margin_left = 204.0
+margin_right = 1024.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "path/textfile"
+
+[node name="Body" type="HBoxContainer" parent="."]
+margin_top = 28.0
+margin_right = 1024.0
+margin_bottom = 572.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Input" type="TextEdit" parent="Body"]
+margin_right = 510.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "[singing] Shall I play for you? Pa rum pump um pum [Imitates heavy drumming] I have no gifts for you. Pa rum pump um pum [Imitates heavy drumming]
+Whassup!
+Whassup.
+What?
+Just clearing my desk. I can't concentrate.
+It's overlapping. It's all spilling over the edge. One word, two syllables. Demarcation.
+You can't do that.
+Safety violation. I could fall and pierce an organ.
+Downsizing?
+Downsizing? I have no problem with that. I have been recommending downsizing since I first got here. I even brought it up in my interview. I say, bring it on."
+wrap_enabled = true
+
+[node name="Output" type="TextEdit" parent="Body"]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+readonly = true
+
+[node name="BottomBar" type="HBoxContainer" parent="."]
+margin_top = 576.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+
+[node name="Gen" type="Button" parent="BottomBar"]
+margin_right = 134.0
+margin_bottom = 24.0
+size_flags_vertical = 3
+text = "Generate Sentence"
+
+[node name="LineEdit" type="LineEdit" parent="BottomBar"]
+margin_left = 138.0
+margin_right = 1024.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+[connection signal="pressed" from="TopBar/Run" to="." method="_on_Run_pressed"]
+[connection signal="pressed" from="TopBar/Import" to="." method="_on_Import_pressed"]
+[connection signal="pressed" from="TopBar/Export" to="." method="_on_Export_pressed"]
+[connection signal="pressed" from="BottomBar/Gen" to="." method="_on_Gen_pressed"]
