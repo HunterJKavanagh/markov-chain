@@ -87,7 +87,7 @@ func generate_sentence() -> String:
 		var f = randf()
 		for c in graph.vertices[word].connections:
 			i += 1
-			if graph.vertices[word].data[c] + sum >= 0 or (sum < graph.vertices[word].data[c] and graph.vertices[word].data[c] <= f):
+			if graph.vertices[word].data[c] + sum >= 1 or (sum + graph.vertices[word].data[c] >= f):
 				new_word = c
 			else:
 				sum += graph.vertices[word].data[c]
